@@ -8,7 +8,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>yogast</title>
+      <title>Team Generator</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -34,9 +34,9 @@
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
          <a href="index.html">Home</a>
-         <a href="about.html">About</a>
-         <a class="active" href="games.html">Games</a>
-         <a href="tranner.html">Tranner</a>
+         <a href="about.html">Team generator</a>
+         <a class="active" href="games.html">Vs Generator</a>
+         <a href="tranner.html">Fixture Generator</a>
          <a href="contact.html">Contact</a>
       </div>
       <!-- header -->
@@ -47,13 +47,11 @@
                <div class="row d_flex">
                   <div class="col-sm-3">
                      <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" /></a>
+                        <h1>Match Generator</h1>
                      </div>
                   </div>
                   <div class="col-sm-9">
                      <ul class="email text_align_right">
-                        <li><a href="Javascript:void(0)"><i class="fa fa-user" aria-hidden="true"></i></a></li>
-                        <li><a href="Javascript:void(0)"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                         <li> <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button></li>
                      </ul>
                   </div>
@@ -63,58 +61,22 @@
       </header>
       <!-- end header -->
       <!-- sports -->
-      <div class="sports">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-10 offset-md-1">
-                  <div class="titlepage text_align_center">
-                     <h2>Our Sports Games</h2>
-                     <p>variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are goingvariations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going</p>
-                     <a class="read_more" href="sports.html">Read More</a>
-                  </div>
-               </div>
-            </div>
-            <div class="row d_flex">
-               <div class="col-md-3">
-                  <div class="sports_main text_align_center">
-                     <figure><img  src="images/sport1.png" alt="#"/></figure>
-                     <div class="sports_text">
-                        <h3>Game 1</h3>
-                        <p>vailable, but the majority have suffered alteration in some form, by injected humour, or randomised words which</p>
-                        <a class="read_more" href="sports.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-6">
-                  <div class="sports_main text_align_center">
-                     <figure><img class="dorder" src="images/sport2.png" alt="#"/></figure>
-                     <div class="sports_text">
-                        <h3 class="dark3">Game 2</h3>
-                        <p>vailable, but the majority have<br> suffered alteration in some <br>form, by injected humour, or <br> randomised words which</p>
-                        <a class="read_more" href="sports.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-3">
-                  <div class="sports_main text_align_center">
-                     <figure><img src="images/sport3.png" alt="#"/></figure>
-                     <div class="sports_text">
-                        <h3>Game 3</h3>
-                        <p>vailable, but the majority have suffered alteration in some form, by injected humour, or randomised words which</p>
-                        <a class="read_more" href="sports.html">Read More</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <div class="container" style="padding: 3%;">
+         <h1>Enter player names or team names</h1>
+         <label for="names">Enter names (one per line):</label>
+         <textarea id="names" rows="6" cols="30"></textarea>
+         <!-- <label for="teamSize">Enter team size:</label>
+         <input type="number" id="teamSize" min="1"> -->
+         <button id="generateBtn">Generate Matches</button>
+         <div id="teams"></div>
+       </div>
       <!-- end sports -->
       <!-- footer -->
       <footer>
          <div class="footer">
             <div class="container">
                <div class="row">
-                  <div class="col-md-8 offset-md-2">
+                  <!-- <div class="col-md-8 offset-md-2">
                      <h3>Follow Us</h3>
                      <ul class="social_icon text_align_center">
                         <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
@@ -133,14 +95,12 @@
                            </li>
                         </ul>
                      </div>
-                  </div>
-                  <div class="col-md-8 offset-md-2">
+                  </div> -->
+                  <div class="col-lg-10 offset-md-1">
                      <div class="menu_bottom text_align_center">
                         <ul>
                            <li><a href="index.html">Home</a></li>
-                           <li><a href="about.html">About</a></li>
-                           <li><a href="games.html">Games</a></li>
-                           <li><a href="tranner.html">Tranner</a></li>
+                           
                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                      </div>
@@ -151,7 +111,8 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-8 offset-md-2">
-                        <p>© 2020 All Rights Reserved. <a href="https://html.design/"> Free Html Template</a></p>
+                        <p>© 2023 All Rights Reserved. <a href="https://html.design/"> Free Html Template</a></p>
+                        <p>Maintained By <a href="https://html.design/"> @am_johny_johny</a></p>
                      </div>
                   </div>
                </div>
@@ -164,5 +125,7 @@
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
       <script src="js/custom.js"></script>
+      <script src="js/vsgenerator.js"></script>
+
    </body>
 </html>
