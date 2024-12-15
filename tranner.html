@@ -1,77 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Team Generator</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" href="css/style.css">
-      <!-- responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- awesome fontfamily -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <!--[if lt IE 9]>
+
+<head>
+   <!-- basic -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- mobile metas -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- site metas -->
+   <title>Team Generator</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- bootstrap css -->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!-- style css -->
+   <link rel="stylesheet" href="css/style.css">
+   <!-- responsive-->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- awesome fontfamily -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   </head>
-   <!-- body -->
-   <body class="main-layout inner_page">
-      <!-- loader  -->
-      <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="" /></div>
-      </div>
-      <!-- end loader -->
-      <div id="mySidepanel" class="sidepanel">
-         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-         <a href="index.html">Home</a>
-         <a href="about.html">Team Genearator</a>
-         <a href="games.html">Vs Genearator</a>
-         <a class="active" href="tranner.html">Fixture Genearator</a>
-         <a href="contact.html">Contact</a>
-      </div>
-      <!-- header -->
-      <header>
-         <!-- header inner -->
-         <div class="head-top">
-            <div class="container-fluid">
-               <div class="row d_flex">
-                  <div class="col-sm-3">
-                     <div class="logo">
-                        <h1>Fixture Generator</h1>
-                     </div>
+</head>
+<!-- body -->
+
+<body class="main-layout inner_page">
+   <!-- loader  -->
+   <div class="loader_bg">
+      <div class="loader"><img src="images/loading.gif" alt="" /></div>
+   </div>
+   <!-- end loader -->
+   <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html">Home</a>
+      <a href="about.html">Team Genearator</a>
+      <a href="games.html">Vs Genearator</a>
+      <a class="active" href="tranner.html">Fixture Genearator</a>
+      <a href="contact.html">Contact</a>
+   </div>
+   <!-- header -->
+   <header>
+      <!-- header inner -->
+      <div class="head-top">
+         <div class="container-fluid">
+            <div class="row d_flex">
+               <div class="col-sm-3">
+                  <div class="logo">
+                     <h1>Fixture Generator</h1>
                   </div>
-                  <div class="col-sm-9">
-                     <ul class="email text_align_right">
-                        <li> <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button></li>
-                     </ul>
-                  </div>
+               </div>
+               <div class="col-sm-9">
+                  <ul class="email text_align_right">
+                     <li> <button class="openbtn" onclick="openNav()"><img src="images/menu_btn.png"></button></li>
+                  </ul>
                </div>
             </div>
          </div>
-      </header>
-      <!-- end header -->
-      <!-- trannir -->
-      <div class="container" style="align-items: center;justify-content: center;width: 100%;height: 100%;padding: 8%;" >
-         <h1>Site Under Maintenance</h1>
-         <p>We're sorry, but the site is currently undergoing maintenance. Please check back later.</p>
-       </div>
-      <!-- end trannir -->
-      <!-- footer -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <!-- <div class="col-md-8 offset-md-2">
+      </div>
+   </header>
+   <!-- end header -->
+   <!-- trannir -->
+   <div class="container">
+      <h1>Expense Calculator</h1>
+      <div> <label for="numPersons">Number of Persons:</label> <input type="number" id="numPersons" min="1"> </div>
+      <div> <label for="totalAmount">Total Amount:</label> <input type="number" id="totalAmount" step="0.01"> <span
+            id="totalAmountSpent"></span> </div>
+      <div id="personsContainer"></div>
+      <div> <label for="gst">GST Amount:</label> <input type="number" id="gst" step="0.01"> </div> <button
+         onclick="calculateExpenses()">Calculate</button>
+      <table id="resultTable">
+         <thead>
+            <tr>
+               <th>Person</th>
+               <th>Amount Spent</th>
+            </tr>
+         </thead>
+         <tbody></tbody>
+      </table> <button onclick="copyCSV()">Copy to CSV</button>
+   </div><!-- end trannir -->
+   <!-- footer -->
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <!-- <div class="col-md-8 offset-md-2">
                      <h3>Follow Us</h3>
                      <ul class="social_icon text_align_center">
                         <li> <a href="Javascript:void(0)"><i class="fa fa-facebook-f"></i></a></li>
@@ -91,34 +106,36 @@
                         </ul>
                      </div>
                   </div> -->
-                  <div class="col-lg-10 offset-md-1">
-                     <div class="menu_bottom text_align_center">
-                        <ul>
-                           <li><a href="index.html">Home</a></li>
-                           
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <div class="copyright text_align_center">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-8 offset-md-2">
-                        <p>© 2023 All Rights Reserved. <a href="https://html.design/"> Free Html Template</a></p>
-                        <p>Maintained By <a href="https://html.design/"> @am_johny_johny</a></p>
-                     </div>
+               <div class="col-lg-10 offset-md-1">
+                  <div class="menu_bottom text_align_center">
+                     <ul>
+                        <li><a href="index.html">Home</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                     </ul>
                   </div>
                </div>
             </div>
          </div>
-      </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="js/jquery.min.js"></script>
-      <script src="js/bootstrap.bundle.min.js"></script>
-      <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/custom.js"></script>
-   </body>
+         <div class="copyright text_align_center">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                     <p>© 2023 All Rights Reserved. <a href="https://html.design/"> Free Html Template</a></p>
+                     <p>Maintained By <a href="https://html.design/"> @am_johny_johny</a></p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </footer>
+   <!-- end footer -->
+   <!-- Javascript files-->
+   <script src="js/jquery.min.js"></script>
+   <script src="js/bootstrap.bundle.min.js"></script>
+   <script src="js/jquery-3.0.0.min.js"></script>
+   <script src="js/custom.js"></script>
+   <script src="js/tranner.js"></script>
+</body>
+
 </html>

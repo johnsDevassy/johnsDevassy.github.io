@@ -847,5 +847,55 @@ ul.social_icon li a:hover {
      opacity: 1;
 }
 
+ 
+ .containertra {
+     max-width: 600px;
+     margin: 0 auto;
+     background: #fff;
+     padding: 20px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ h1 {
+     text-align: center;
+ }
+ 
+ label {
+     display: block;
+     margin: 10px 0 5px;
+ }
+ 
+ input {
+     width: 100%;
+     padding: 8px;
+     margin-bottom: 10px;
+ }
+ 
+ button {
+     display: block;
+     width: 100%;
+     padding: 10px;
+     background: #007BFF;
+     color: #fff;
+     border: none;
+     cursor: pointer;
+ }
+ 
+ button:hover {
+     background: #0056b3;
+ }
+ 
+ table {
+     width: 100%;
+     margin-top: 20px;
+     border-collapse: collapse;
+ }
+ 
+ th, td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+ 
 
 /** end contact section **/
